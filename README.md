@@ -115,7 +115,7 @@ Save the file. ROS Workspace now has been done!!
     catkin_make
 ```
 
-## How to install ros_robor-rr-
+## How to install ros_robot-rr-
 1.go into src file of your ROS workspace
 ```bash    
     cd ~/(name your catkin workspace)/git_dir
@@ -141,5 +141,5 @@ example : cd ~/catkin_ws/src/git_dir
     chmod +x MainProject.py
 ```
 ```bash
-    roslaunch projectros rviz_node.launch port:="(name your port of arduino)"
+    roslaunch ros_robot-rr- Rviz_node.launch port:="(name your port of arduino)"
 ```
