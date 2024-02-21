@@ -126,7 +126,7 @@ Save the file. ROS Workspace now has been done!!
     git clone https://github.com/kaninso/ros_robot-rr-.git
 ```
 ```bash
-    cd ..
+    cd ~/catkin_ws
 ```
 ```bash
     catkin_make
