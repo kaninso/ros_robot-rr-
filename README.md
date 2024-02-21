@@ -134,11 +134,11 @@ Save the file. ROS Workspace now has been done!!
 
 3.add permission to execute gui python
 ```bash
-    cd src/projectros
+    cd src/git_dir/ros_robot-rr-.
 ```
 ```bash
-    chmod +x gui_ros.py
+    chmod +x MainProject.py
 ```
 ```bash
-    roslaunch rojectros rviz_node.launch port:="(name your port of arduino)"
+    roslaunch projectros rviz_node.launch port:="(name your port of arduino)"
 ```
