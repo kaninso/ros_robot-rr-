@@ -120,6 +120,7 @@ Save the file. ROS Workspace now has been done!!
 ```bash    
     cd ~/(name your catkin workspace)/git_dir
 ```
+example : cd ~/catkin_ws/src/git_dir
 
 2.clone github
 ```bash
