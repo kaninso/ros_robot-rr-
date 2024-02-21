@@ -1,0 +1,19 @@
+<launch>
+  <node pkg="rosserial_python" type="serial_node.py" name="serial_node" output="screen">
+  <param name="port" value="/dev/ttyUSB0" />
+  </node>
+  <arg name="model" default="$(find urdf_tutorial)/urdf/01-myfirst.urdf"/>
+  <arg name="gui" default="false" /> <!-- ตั้งค่า gui เป็น false -->
+
+  <arg name="rvizconfig" default="$(find urdf_tutorial)/rviz/urdf.rviz" />
+
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+
+  <!-- เปลี่ยนจาก if เป็น unless -->
+  <node if="$(arg gui)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+  <node name="Gui_Project" pkg="ProjectROS" type="MainProject.py" />
+
+</launch>
